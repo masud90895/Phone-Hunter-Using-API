@@ -27,6 +27,7 @@ const receivedData= (phones,dataLimit )=>{
     // alert phone not found 
     if(phones.length === 0){
         Swal.fire({
+            icon: 'error',
             title: 'Oops...Phone Not Found',
             text: 'Something went wrong!.Please input Valid name',
           }) 
@@ -38,8 +39,8 @@ const receivedData= (phones,dataLimit )=>{
     const cardDiv = document.createElement('div')
     cardDiv.classList.add('col')
     cardDiv.innerHTML=`
-    <div class="card ">
-            <img class="w-50" src="${image}" class="card-img-top" alt="...">
+    <div class="card p-1">
+            <img class="w-50 mx-auto" src="${image}" class="card-img-top" alt="...">
         <div class="card-body">
             <h3 class="card-title">${brand}</h3>
             <h5 class="card-title">${phone_name}</h5>
