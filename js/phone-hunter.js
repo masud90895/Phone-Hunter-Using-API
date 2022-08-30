@@ -20,6 +20,8 @@ const receivedData= (phones,dataLimit )=>{
     }
     else{
         showAll.classList.add('d-none');
+        document.getElementById('search-input').value ='';
+    
     }
 
     // alert phone not found 
@@ -54,7 +56,7 @@ const receivedData= (phones,dataLimit )=>{
 const pressesSearch = (dataLimit)=>{
     const searchInput =document.getElementById('search-input');
     const searchInputValue = searchInput.value;
-    searchInput.value = '';
+    // searchInput.value = '';
     loadData(searchInputValue,dataLimit);
 }
 // search 
